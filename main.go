@@ -201,7 +201,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	 sus = append(sus, 670489248)
+	sus = append(sus, 670489248)
 	// sus = append(sus, 87654321)
 
 	if *runcfg != "" {
