@@ -116,7 +116,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/zaobao"         // 早报
 
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/wtf"            // 鬼东西
-	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
+	 _ "github.com/FloatTech/ZeroBot-Plugin/plugin/bilibili_push"  // b站推送
 
 	//                               ^^^^                               //
 	//                          ^^^^^^^^^^^^^^                          //
@@ -169,9 +169,9 @@ func init() {
 	// 直接写死 AccessToken 时，请更改下面第二个参数
 	token := flag.String("t", "", "Set AccessToken of WSClient.")
 	// 直接写死 URL 时，请更改下面第二个参数
-	url := flag.String("u", "ws://127.0.0.1:6700", "Set Url of WSClient.")
+	url := flag.String("u", "ws://127.0.0.1:6701", "Set Url of WSClient.")
 	// 默认昵称
-	adana := flag.String("n", "椛椛", "Set default nickname.")
+	adana := flag.String("n", "神楽メア", "Set default nickname.")
 	prefix := flag.String("p", "/", "Set command prefix.")
 	runcfg := flag.String("c", "", "Run from config file.")
 	save := flag.String("s", "", "Save default config to file and exit.")
@@ -201,7 +201,7 @@ func init() {
 	}
 
 	// 通过代码写死的方式添加主人账号
-	// sus = append(sus, 12345678)
+	 sus = append(sus, 670489248)
 	// sus = append(sus, 87654321)
 
 	if *runcfg != "" {
@@ -225,7 +225,7 @@ func init() {
 
 	config.W = []*driver.WSClient{driver.NewWebSocketClient(*url, *token)}
 	config.Z = zero.Config{
-		NickName:      append([]string{*adana}, "ATRI", "atri", "亚托莉", "アトリ"),
+		NickName:      append([]string{*adana}, "めあ", "mea", "mea小姐", "メア"),
 		CommandPrefix: *prefix,
 		SuperUsers:    sus,
 		Driver:        []zero.Driver{config.W[0]},
